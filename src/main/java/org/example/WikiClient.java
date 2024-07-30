@@ -4,7 +4,6 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
-import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,7 +12,7 @@ public class WikiClient {
     public static final String WIKI = "/wiki/";
     public static final String EN_WIKI_URL = "https://en.wikipedia.org" + WIKI;
 
-    public Set<String> getByTitle(String title) throws IOException {
+    public Set<String> getByTitle(String title) {
         Set<String> links = new HashSet<>();
         String url = EN_WIKI_URL + title;
         try {
